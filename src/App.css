@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* css variables */
+:root {
+  --primary-color: #7ddc5a;
+  --heading-color: rgb(235, 251, 235);
+  --btn-primary-bg: #379cf6;
+  --btn-secondary-bg: #bfd0c1;
+  --team-card-bg: #6f9771;
+  --link-color: #f3f7f4;
+  --link-active: #62825D;
+  --card-bg: linear-gradient( 
+    45deg,
+    rgb(27, 138, 36) 0%,
+    #3D5300 95%,
+    rgb(82, 110, 72) 35%
+  );
+  --counter-color: linear-gradient(
+    90deg,
+    #3D5300 30%,
+    rgb(194, 255, 199) 55%,
+    rgb(82, 110, 72) 75%
+  );
+  --body-bg: rgba(6, 11, 26, 1);
+  --newsletter-bg: linear-gradient(
+    90deg,
+    rgb(158, 223, 156) 0%,
+    rgb(98, 130, 93) 0%,
+    rgb(82, 110, 72) 150%
+  );
+  --testimonial-bg: #1f6e3a;
+  --font-name: "Roboto", sans-serif;
+  --small-text-color: rgba(239, 224, 224, 0.774);
+  --icon-bg:#3D5300
+  ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light-theme {
+  --body-bg: rgb(255,255,255);
+  --heading-color: #3D5300;
+  --btn-secondary-bg: #109337;
+  --btn-primary-bg: #c9d9cadc;
+  --primary-color: rgb(120, 163, 112) 0%, ;
+  --counter-color: #ecf4ee;
+  --counter-section-bg: #0b4424;
+  --link-color: #2fd837;
+  --link-active: green
+  --newsletter-bg: linear-gradient(
+    180deg,
+    rgba(189, 243, 255, 1) 29%,
+    rgba(193, 243, 255, 1) 50%,
+    rgba(226, 250, 255, 1) 78%
+  );
+  --small-text-color: black;
+  --card-bg:#fff;
+  --testimonial-bg: #fafffa;
+  --team-card-bg: #edf6ec;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: var(--body-bg);
+  font-family: var(--font-name);
+}
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+h1,h2{
+  color: var(--heading-color);
+}
+section {
+  padding: 60px;
+}
+.container {
+  width: 1140px;
+  padding: 0px 15px;
+  margin: auto;
+}
+.description {
+  color: var(--small-text-color);
+  line-height: 30px;
+  font-size: 0.9rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width:1024px) {
+  .container{
+    width: 100%;
   }
 }
